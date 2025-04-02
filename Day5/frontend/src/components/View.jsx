@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./View.css";
 import Register from "./Register";
+import Delete from './Delete';
+import Update from './Update';
 
 const View = () => {
   const [users, setUsers] = useState([]);
@@ -16,8 +18,16 @@ const View = () => {
   };
   return (
     <div>
-        <Register onUserRegistered={viewData} />
-      <table border={2}>
+      <Register onUserRegistered={viewData} />
+      
+      <center><h2>UPDATE A USER:</h2></center>
+      <Update onUserRegistered={viewData}/>
+
+      <center><h2>DELETE A USER:</h2></center>
+      <Delete onUserRegistered={viewData}/>
+
+      <center><h2>-- CURRENT USERS --</h2></center>
+      <table border={1}>
         <thead>
           <tr>
             <th>ID</th>
@@ -35,6 +45,7 @@ const View = () => {
           ))}
         </tbody>
       </table>
+
     </div>
   );
 };

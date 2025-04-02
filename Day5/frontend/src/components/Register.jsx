@@ -23,4 +23,4 @@ const Register = ({onUserRegistered}) => {
     </div>
   )
 }
-export default Register
+export default Register;
