@@ -7,7 +7,7 @@ const Delete = ({onUserRegistered}) => {
     const handleDelete= async (e)=>{
         e.preventDefault();
         const id=e.target.id.value;
-        await axios.delete(`http://localhost:9000/users/${id}`);
+        await axios.delete(`https://fsd-backend-afns.onrender.com/users/${id}`);
         alert(`Entry with ID: ${id} deleted successfully`);
         onUserRegistered();
 

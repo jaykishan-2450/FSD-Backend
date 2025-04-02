@@ -12,7 +12,7 @@ const Update = ({onUserRegistered}) => {
         const data={name,age}
 
 
-        await axios.put(`http://localhost:9000/users/${id}`,data);
+        await axios.put(`https://fsd-backend-afns.onrender.com/users/${id}`,data);
         alert(`Entry with ID: ${id} Updated successfully`);
         onUserRegistered();
 
