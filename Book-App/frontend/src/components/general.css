@@ -13,7 +13,7 @@ h1, h2, h3, h4 {
 }
 
 button {
-    background-color: #3498db;
+    background-color:#2e8b57 ; /* Light green */
     color: white;
     border: none;
     padding: 10px 15px;
@@ -24,7 +24,7 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #0b4625; /* Darker green */
 }
 
 input[type="text"], input[type="date"], input[type="search"] {
@@ -39,7 +39,7 @@ input[type="text"], input[type="date"], input[type="search"] {
 form {
     max-width: 400px;
     margin: 20px auto;
-    padding: 20px;
+    padding: 40px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -119,7 +119,7 @@ th, td {
 }
 
 th {
-    background-color: #3498db;
+    background-color: #2e8b57; /* Light green */
     color: white;
 }
 

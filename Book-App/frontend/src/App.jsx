@@ -10,38 +10,35 @@ import DeleteBook from "./components/DeleteBook";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-100">
-        <nav className="bg-gray-900 text-white px-6 py-4 shadow-md flex justify-center space-x-8">
-          <Link
-            className="hover:text-blue-400 transition duration-200 font-medium"
-            to="/add">
+      <div className="app-container">
+        <nav className="navbar">
+          <Link className="nav-link" to="/add">
             Add Book
           </Link>
-          <Link
-            className="hover:text-blue-400 transition duration-200 font-medium"
-            to="/view">
+          <Link className="nav-link" to="/view">
             View Book
           </Link>
-          <Link
-            className="hover:text-blue-400 transition duration-200 font-medium"
-            to="/search">
+          <Link className="nav-link" to="/search">
             Search Book
           </Link>
-          <Link
-            className="hover:text-blue-400 transition duration-200 font-medium"
-            to="/update">
+          <Link className="nav-link" to="/update">
             Update Book
           </Link>
-          <Link
-            className="hover:text-blue-400 transition duration-200 font-medium"
-            to="/delete">
+          <Link className="nav-link" to="/delete">
             Delete Book
           </Link>
         </nav>
 
-        <main className="p-6">
+        <main className="main-content">
           <Routes>
-           <Route path="/" element={<h1 className="text-2xl font-bold">Welcome to the Book Management App</h1>} />
+            <Route
+              path="/"
+              element={
+                <h1 className="welcome-message">
+                  Welcome to the Book Management App
+                </h1>
+              }
+            />
             <Route path="/add" element={<AddBook />} />
             <Route path="/view" element={<ViewBook />} />
             <Route path="/search" element={<SearchBook />} />
@@ -49,6 +46,13 @@ function App() {
             <Route path="/delete" element={<DeleteBook />} />
           </Routes>
         </main>
+
+        <footer className="footer">
+          <p>
+            <strong>Jay Kishan</strong> | <strong>CSE(DS)</strong> |{" "}
+            <strong>Section A</strong> | <strong>2200321540089</strong>
+          </p>
+        </footer>
       </div>
     </Router>
   );
